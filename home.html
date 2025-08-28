@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <title>Student Management Application</title>
+  <style>
+    body {
+      background-color: #f4f4f9; /* soft light color */
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .navbar {
+      background: linear-gradient(90deg, #0d6efd, #4a9dff);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .navbar .nav-link {
+      color: white !important;
+      font-weight: 500;
+    }
+    .navbar .nav-link:hover {
+      color: #ffd700 !important;
+    }
+
+    .hero {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 20px;
+      background: url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
+      position: relative;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.55);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 750px;
+      padding: 40px;
+      background: rgba(255,255,255,0.15);
+      border-radius: 20px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+      color: white;
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .hero h6 {
+      font-size: 1.2rem;
+      margin-bottom: 35px;
+      line-height: 1.6;
+    }
+
+    .action-btn {
+      padding: 14px 32px;
+      font-size: 1.1rem;
+      border-radius: 35px;
+      transition: all 0.3s ease-in-out;
+      margin: 0 10px;
+    }
+
+    .btn-primary.action-btn {
+      background: linear-gradient(45deg, #0d6efd, #4a9dff);
+      border: none;
+    }
+
+    .btn-primary.action-btn:hover {
+      transform: translateY(-4px) scale(1.05);
+      box-shadow: 0px 6px 20px rgba(0,0,0,0.2);
+    }
+
+    .btn-outline-light.action-btn {
+      border: 2px solid white;
+      color: white;
+    }
+
+    .btn-outline-light.action-btn:hover {
+      background: white;
+      color: #0d6efd;
+    }
+
+    footer {
+      text-align: center;
+      padding: 18px;
+      background: linear-gradient(90deg, #0d6efd, #4a9dff);
+      color: white;
+      font-size: 0.95rem;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg fixed-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold text-white" href="/">Student Management Application</a>
+    <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarNav" aria-controls="navbarNav"
+            aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link active" href="/">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="allStudent">Students</a></li>
+        <li class="nav-item"><a class="nav-link" href="admin">Admin</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-content">
+    <h1>Welcome to Student Management Application</h1>
+    <h6>Manage your students, classes, and fees efficiently.
+      You can access the Admin Panel for complete control or explore the student list directly.</h6>
+    <div>
+      <a href="admin" class="btn btn-primary action-btn">Admin Panel</a>
+      <a href="allStudent" class="btn btn-outline-light action-btn">View Students</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  &copy; 2025 Student Management Application | Built with ❤️ using Spring Boot + Thymeleaf
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
